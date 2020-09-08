@@ -8,36 +8,36 @@
 import Foundation
 import Combine
 
-enum status {
+enum Status {
     case pendingResponse
     case queued
     case idle
 }
 
-protocol matchMaker {
+protocol MatchMaker {
     var user: user { get set }
-    var status: AnyPublisher<status, Never> { get set }
+    var status: AnyPublisher<Status, Never> { get set }
     
     func enqueue()
     func dequeue()
     
 }
 
-protocol user {
+protocol User {
     var name: String { get set }
     var phoneNumber: String { get set }
-    //data and uuid are not in scope yet, revisit as a group
-    //var id: uuid { get set }
-    //var photo: data { get set }
+    
+    var id: UUID { get set }
+    var photo: Data { get set }
 }
 
-protocol match {
-    var teamA: team { get set }
-    var teamB: team { get set }
+protocol Match {
+    var firstTeam: Team { get set }
+    var secondTeam: Team { get set }
 }
 
-struct team {
-    var members: [user]?
-    var name: String
+protocol Team {
+    var members: [user]? { get set }
+    var name: String { get set }
 }
 
