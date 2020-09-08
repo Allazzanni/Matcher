@@ -14,7 +14,7 @@ enum Status {
     case idle
 }
 
-protocol matchMaker {
+protocol MatchMaker {
     var user: user { get set }
     var status: AnyPublisher<Status, Never> { get set }
     
@@ -23,7 +23,7 @@ protocol matchMaker {
     
 }
 
-protocol user {
+protocol User {
     var name: String { get set }
     var phoneNumber: String { get set }
     
@@ -31,13 +31,13 @@ protocol user {
     var photo: Data { get set }
 }
 
-protocol match {
+protocol Match {
     var firstTeam: Team { get set }
     var secondTeam: Team { get set }
 }
 
-struct Team {
-    var members: [user]?
-    var name: String
+protocol Team {
+    var members: [user]? { get set }
+    var name: String { get set }
 }
 
