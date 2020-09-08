@@ -19,6 +19,8 @@
 		34609494250708ED0095E9EB /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34609465250708EA0095E9EB /* Persistence.swift */; };
 		34609495250708ED0095E9EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34609466250708EC0095E9EB /* Assets.xcassets */; };
 		34609496250708ED0095E9EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34609466250708EC0095E9EB /* Assets.xcassets */; };
+		346094A625070E280095E9EB /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346094A525070E280095E9EB /* Protocol.swift */; };
+		346094A725070E280095E9EB /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346094A525070E280095E9EB /* Protocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,7 @@
 		34609486250708ED0095E9EB /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3460948A250708ED0095E9EB /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		3460948C250708ED0095E9EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		346094A525070E280095E9EB /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +109,7 @@
 			children = (
 				34609463250708EA0095E9EB /* MatcherApp.swift */,
 				34609464250708EA0095E9EB /* ContentView.swift */,
+				346094A525070E280095E9EB /* Protocol.swift */,
 				34609465250708EA0095E9EB /* Persistence.swift */,
 				34609466250708EC0095E9EB /* Assets.xcassets */,
 				34609461250708EA0095E9EB /* Shared.xcdatamodeld */,
@@ -320,6 +324,7 @@
 				34609493250708ED0095E9EB /* Persistence.swift in Sources */,
 				3460948D250708ED0095E9EB /* Shared.xcdatamodeld in Sources */,
 				34609491250708ED0095E9EB /* ContentView.swift in Sources */,
+				346094A625070E280095E9EB /* Protocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +336,7 @@
 				34609494250708ED0095E9EB /* Persistence.swift in Sources */,
 				3460948E250708ED0095E9EB /* Shared.xcdatamodeld in Sources */,
 				34609492250708ED0095E9EB /* ContentView.swift in Sources */,
+				346094A725070E280095E9EB /* Protocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
