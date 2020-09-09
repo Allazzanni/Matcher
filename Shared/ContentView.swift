@@ -13,8 +13,8 @@ struct ContentView: View {
     
     var body: some View {
         return TabView(selection: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Selection@*/.constant(1)/*@END_MENU_TOKEN@*/) {
-            Text("Tab Content 1").tabItem { Text("Profile") }.tag(1)
-            Text("Tab Content 2").tabItem { Text("Match Status") }.tag(2)
+            Text("Tab Content 1").tabItem { Text("Match Status") }.tag(1)
+            Text("Tab Content 2").tabItem { Text("Profile") }.tag(2)
         }
     }
 
