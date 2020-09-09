@@ -25,6 +25,24 @@ struct ContentView: View {
    
 }
 
+struct ProfileView: View {
+    @State var name = "Matthew"
+    @State var phoneNumber = "555-555-5555"
+    
+    var body: some View {
+        VStack {
+            TextField ("Name", text: $name)
+            TextField ("PhoneNumber", text: $phoneNumber)
+            Button (action: {}) {
+                Text ("Select Photo")
+            }
+            Button (action: {}){
+                Text ("Confirm")
+            }
+        }
+    }
+}
+
 private let itemFormatter: DateFormatter = {
     let formatter = DateFormatter()
     formatter.dateStyle = .short
