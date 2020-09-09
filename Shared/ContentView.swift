@@ -12,9 +12,13 @@ struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
     
     var body: some View {
-        return TabView(selection: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Selection@*/.constant(1)/*@END_MENU_TOKEN@*/) {
-            Text("Tab Content 1").tabItem { Text("Match Status") }.tag(1)
-            Text("Tab Content 2").tabItem { Text("Profile") }.tag(2)
+        return TabView(selection: .constant(1)) {
+            Text("Tab Content 1")
+                .tabItem { Text("Match Status") }
+                .tag(1)
+            Text("Tab Content 2")
+                .tabItem { Text("Profile") }
+                .tag(2)
         }
     }
 
