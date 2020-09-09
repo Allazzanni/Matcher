@@ -12,10 +12,11 @@ enum Status {
     case pendingResponse
     case queued
     case idle
+    case matched
 }
 
 protocol MatchMaker {
-    var user: user { get set }
+    var user: User { get set }
     var status: AnyPublisher<Status, Never> { get set }
     
     func enqueue()
@@ -31,13 +32,8 @@ protocol User {
     var photo: Data { get set }
 }
 
-protocol Match {
-    var firstTeam: Team { get set }
-    var secondTeam: Team { get set }
-}
-
 protocol Team {
-    var members: [user]? { get set }
+    var members: [User]? { get set }
     var name: String { get set }
 }
 
