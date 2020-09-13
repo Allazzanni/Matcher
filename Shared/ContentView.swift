@@ -11,12 +11,16 @@ import CoreData
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
     
+    @FetchRequest(
+        fetchRequest: CDUser.allUsersFetchRequest
+    ) var users: FetchedResults<CDUser>
+    
     var body: some View {
         return TabView(selection: .constant(1)) {
             Text("Tab Content 1")
                 .tabItem { Text("Match Status") }
                 .tag(1)
-            Text("Tab Content 2")
+            ProfileView(user: users[0])
                 .tabItem { Text("Profile") }
                 .tag(2)
         }
@@ -26,13 +30,14 @@ struct ContentView: View {
 }
 
 struct ProfileView: View {
+    @State var user: User
     @State var name = "Matthew"
     @State var phoneNumber = "555-555-5555"
     
     var body: some View {
         VStack {
-            TextField ("Name", text: $name)
-            TextField ("PhoneNumber", text: $phoneNumber)
+            TextField ("Name", text: $user.name)
+            TextField ("PhoneNumber", text: $user.phoneNumber)
             Button (action: {}) {
                 Text ("Select Photo")
             }

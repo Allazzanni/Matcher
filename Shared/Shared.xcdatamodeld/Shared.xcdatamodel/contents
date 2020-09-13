@@ -5,10 +5,10 @@
         <relationship name="members" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDUser" inverseName="team" inverseEntity="CDUser"/>
     </entity>
     <entity name="CDUser" representedClassName="CDUser" syncable="YES" codeGenerationType="class">
-        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
-        <attribute name="name" attributeType="String" defaultValueString="Name"/>
-        <attribute name="phoneNumber" attributeType="String" defaultValueString="(555) 555-5555"/>
-        <attribute name="photo" optional="YES" attributeType="Binary"/>
+        <attribute name="cdID" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="cdName" attributeType="String" defaultValueString="Name"/>
+        <attribute name="cdPhoneNumber" attributeType="String" defaultValueString="(555) 555-5555"/>
+        <attribute name="cdPhoto" optional="YES" attributeType="Binary"/>
         <relationship name="team" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDTeam" inverseName="members" inverseEntity="CDTeam"/>
     </entity>
     <elements>

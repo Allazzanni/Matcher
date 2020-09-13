@@ -29,7 +29,7 @@ protocol User {
     var phoneNumber: String { get set }
     
     var id: UUID { get set }
-    var photo: Data { get set }
+    var photo: Data? { get set }
 }
 
 protocol Team {
